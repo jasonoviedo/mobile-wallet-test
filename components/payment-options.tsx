@@ -118,7 +118,7 @@ export function PaymentOptions({ onSelectMethod, onSelectContact, contacts }: Pa
                   >
                     {contact.accountType === "company" ? (
                       <Building className="h-5 w-5" />
-                    ) : (
+                    ) : (                      
                       contact.name
                         .split(" ")
                         .map((n) => n[0])

@@ -7,7 +7,10 @@ import { BankDetailsForm } from "@/components/bank-details-form"
 import { PaymentReview } from "@/components/payment-review"
 import { TransactionReceipt } from "@/components/transaction-receipt"
 import { sendMoney } from "@/lib/transactions"
+// import type { Contact } from "@/lib/types"
 import type { Contact } from "@/lib/types"
+import { create } from "axios"
+import { se } from "date-fns/locale"
 
 interface SendMoneyFlowProps {
   balance: number

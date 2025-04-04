@@ -5,7 +5,7 @@ import { AppFooter } from "@/components/app-footer"
 import { HelpContent } from "@/components/help-content"
 
 export default async function HelpPage() {
-  const cookieStore = cookies()
+  const cookieStore = await cookies()
   const isAuthenticated = cookieStore.get("auth-token")
 
   if (!isAuthenticated) {

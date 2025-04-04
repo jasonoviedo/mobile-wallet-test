@@ -60,7 +60,12 @@ export function LoginForm() {
     const fullPhoneNumber = `${selectedCountryObj.dialCode}${phoneNumber.startsWith("0") ? phoneNumber.substring(1) : phoneNumber}`
 
     try {
-      await requestOTP(fullPhoneNumber)
+      // await requestOTP(fullPhoneNumber) // Replacing with actual API call
+      await requestOTP({
+        country: selectedCountryObj.code,
+        dialCode: selectedCountryObj.dialCode,
+        phone: phoneNumber,
+      })
       setStep("otp")
     } catch (err) {
       setError("Failed to send OTP. Please try again.")
@@ -78,7 +83,11 @@ export function LoginForm() {
     const fullPhoneNumber = `${selectedCountryObj.dialCode}${phoneNumber.startsWith("0") ? phoneNumber.substring(1) : phoneNumber}`
 
     try {
-      await verifyOTP(fullPhoneNumber, otp)
+      await verifyOTP({
+        country: selectedCountryObj.code,
+        dialCode: selectedCountryObj.dialCode,
+        phone: phoneNumber,
+      }, otp)
       router.push("/dashboard")
       router.refresh()
     } catch (err) {
