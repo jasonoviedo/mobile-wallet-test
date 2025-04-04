@@ -271,7 +271,7 @@ export const translations = {
     whatAreFees: "¿Cuáles son las tarifas?",
     whatAreFeesAnswer:
       "Cobramos una tarifa fija de $0.50 por transacción. Los tipos de cambio se actualizan en tiempo real.",
-    isMoneyafe: "¿Mi dinero está seguro?",
+    isMoneySafe: "¿Mi dinero está seguro?",
     isMoneySafeAnswer:
       "Sí, utilizamos protocolos de seguridad estándar de la industria y tus fondos se mantienen en billeteras seguras.",
     contactSupport: "Contactar Soporte",
@@ -418,7 +418,7 @@ export const translations = {
     whatAreFees: "Quais são as taxas?",
     whatAreFeesAnswer:
       "Cobramos uma taxa fixa de $0,50 por transação. As taxas de câmbio são atualizadas em tempo real.",
-    isMoneyafe: "Meu dinheiro está seguro?",
+    isMoneySafe: "Meu dinheiro está seguro?",
     isMoneySafeAnswer:
       "Sim, usamos protocolos de segurança padrão da indústria e seus fundos são mantidos em carteiras seguras.",
     contactSupport: "Contatar Suporte",
