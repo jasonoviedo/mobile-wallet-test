@@ -7,7 +7,7 @@ import { getUserData } from "@/lib/user"
 import { AppFooter } from "@/components/app-footer"
 
 export default async function DashboardPage() {
-  const cookieStore = cookies()
+  const cookieStore = await cookies()
   const isAuthenticated = cookieStore.get("auth-token")
 
   if (!isAuthenticated) {
