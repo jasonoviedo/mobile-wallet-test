@@ -37,7 +37,8 @@ export async function verifyOTP(phoneNumber: string, otp: string): Promise<void>
   }
 
   // Set an authentication cookie
-  cookies().set("auth-token", "demo-token-value", {
+  let cookieStore = await cookies();
+  cookieStore.set("auth-token", "demo-token-value", {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
     maxAge: 60 * 60 * 24 * 7, // 1 week
@@ -48,11 +49,13 @@ export async function verifyOTP(phoneNumber: string, otp: string): Promise<void>
 }
 
 export async function logout(): Promise<void> {
-  cookies().delete("auth-token")
+  let cookieStore = await cookies();
+  cookieStore.delete("auth-token")
   return Promise.resolve()
 }
 
 export async function isAuthenticated(): Promise<boolean> {
-  return cookies().has("auth-token")
+  let cookieStore = await cookies();
+  return cookieStore.has("auth-token")
 }
 

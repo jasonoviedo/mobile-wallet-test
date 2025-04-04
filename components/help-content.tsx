@@ -32,7 +32,7 @@ export function HelpContent() {
             </div>
 
             <div>
-              <h3 className="font-medium">{t("isMoneyafe")}</h3>
+              <h3 className="font-medium">{t("isMoneySafe")}</h3>
               <p className="text-sm text-muted-foreground mt-1">{t("isMoneySafeAnswer")}</p>
             </div>
           </CardContent>
